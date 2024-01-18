@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced SPA Layout</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 1em;
+            cursor: pointer;
+        }
+
+        main {
+            margin: 1em;
+        }
+
+        section {
+            display: none;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            margin-bottom: 2em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>SPA Layout Example</h1>
+        <p>A simple single-page application layout</p>
+    </header>
+
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('about')">About</a>
+        <a onclick="showSection('services')">Services</a>
+        <a onclick="showSection('contact')">Contact</a>
+    </nav>
+
+    <main>
+        <section id="home" style="display: block;">
+            <h2>Welcome to Our Website</h2>
+            <p>This is the home section. Content dynamically loaded for a seamless experience.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Learn more about our company and mission.</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>Explore the various services we offer to our clients.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for any inquiries or collaborations.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SPA Layout Example</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>

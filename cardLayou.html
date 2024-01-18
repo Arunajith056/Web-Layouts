@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Card-based Layout</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin:1em;
+        }
+
+        .card {
+            flex: 0 0 calc(33.333% - 20px);
+            background-color: #fff;
+            margin: 0 5px 10px;
+            padding: 1em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+
+        .card h2 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .card p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .card {
+                flex: 0 0 calc(50% - 20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Card-based Layout Example</h1>
+        <p>A modern card-based display of products or articles</p>
+    </header>
+
+    <div class="cards">
+        <div class="card">
+            <img src="product1.jpg" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>Description of Product 1...</p>
+        </div>
+
+        <div class="card">
+            <img src="product2.jpg" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Description of Product 2...</p>
+        </div>
+
+        <div class="card">
+            <img src="product3.jpg" alt="Product 3">
+            <h2>Product 3</h2>
+            <p>Description of Product 3...</p>
+        </div>
+
+        <!-- Add more cards as needed -->
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Card-based Layout Example</p>
+    </footer>
+</body>
+
+</html>

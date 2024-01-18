@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Responsive Layout</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .hero {
+            background-image: url('hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 4em 1em;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2em 0;
+        }
+
+        .feature {
+            flex: 1 1 300px;
+            background-color: #fff;
+            margin: 0 1em;
+            padding: 1.5em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1em;
+        }
+
+        .cta {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2em 1em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero {
+                padding: 2em 1em;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .feature {
+                flex: 1 0 100%;
+                margin: 0 0 1em 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Responsive Layout Example</h1>
+        <p>A modern responsive landing page</p>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to Our Website</h1>
+        <p>Discover the amazing features of our services.</p>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <h2>Feature 1</h2>
+            <p>Description of feature 1...</p>
+        </div>
+
+        <div class="feature">
+            <h2>Feature 2</h2>
+            <p>Description of feature 2...</p>
+        </div>
+
+        <div class="feature">
+            <h2>Feature 3</h2>
+            <p>Description of feature 3...</p>
+        </div>
+    </div>
+
+    <div class="cta">
+        <h2>Ready to Get Started?</h2>
+        <p>Join us today and experience the difference.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Responsive Layout Example</p>
+    </footer>
+</body>
+
+</html>
